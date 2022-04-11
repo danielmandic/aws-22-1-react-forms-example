@@ -1,3 +1,20 @@
+## Getting started
+1. Clone this repo
+2. cd into the project folder
+3. install all dependencies with `npm install`
+4. start the project in development mode `npm run start`
+5. have fun
+6. when you are ready to deply, run `npm run build` and copy the content of the `/build` folder
+
+## How to reproduce this repo
+1. Initialize a new react project `npx create-react-app my-fancy-app`
+2. Follow the steps printed in the console to get started
+3. To install `axios` dependency for easy network requests run `npm install axios`
+
+---
+
+And here goes the standard readme..
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
