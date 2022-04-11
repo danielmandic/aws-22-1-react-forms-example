@@ -1,5 +1,8 @@
 import './App.css'
 import { useState } from 'react'
+import axios from "axios"
+
+const API_URL = "api"
 
 const initialFormData = {
   name: 'Gwen Doe',
@@ -20,7 +23,6 @@ function App() {
     const name = event.target.name
     const newFormData = { ...formData, [name]: value }
     setFormData(newFormData)
-    console.log(newFormData)
   }
 
   const handleCheckboxChange = event => {
@@ -28,12 +30,16 @@ function App() {
     const name = event.target.name
     const newFormData = { ...formData, [name]: checked }
     setFormData(newFormData)
-    console.log(newFormData)
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    axios.post(API_URL,formData)
   }
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           Name{' '}
           <input
@@ -116,6 +122,9 @@ function App() {
             name="message"
           />
         </label>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </div>
   )
