@@ -4,7 +4,8 @@
 3. install all dependencies with `npm install`
 4. start the project in development mode `npm run start`
 5. have fun
-6. when you are ready to deply, run `npm run build` and copy the content of the `/build` folder
+6. to start the echo server on port 3001 for debugging run `npx http-echo-server 3001`
+7. when you are ready to deploy, run `npm run build` and copy the content of the `/build` folder
 
 ## How to reproduce this repo
 1. Initialize a new react project `npx create-react-app my-fancy-app`
