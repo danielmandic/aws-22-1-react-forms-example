@@ -5,14 +5,15 @@ import axios from "axios"
 const API_URL = "api"
 
 const initialFormData = {
-  name: 'Gwen Doe',
+  name: 'Max Mustermann',
+  email: 'Max_Mustermann@gmx.de',
   hours: 2,
-  fluffiness: 50,
-  color: 'red',
-  spits: true,
-  bites: false,
-  extraMean: true,
-  message: 'This is a very important message',
+  date: 1649687861,
+  court: '1',
+  available_Court: true,
+  favourite_Court: false,
+  notification_mail: true,
+  message: 'Bitte die/den/die Spielpartner*in/nen eintragen.',
 }
 
 function App() {
@@ -51,75 +52,88 @@ function App() {
         </label>
         <br />
         <label>
-          Hours{' '}
+          email{' '}
           <input
-            type="number"
-            name="hours"
-            value={formData.hours}
+            type="string"
+            name="email"
+            value={formData.email}
             onChange={handleChange}
-            min="2"
-            max="12"
           />
         </label>
         <br />
         <label>
-          Fluffiness{' '}
+          Date{' '}
           <input
-            type="range"
-            name="fluffiness"
-            value={formData.fluffiness}
+            type="date"
+            name="date"
+            value={formData.date}
             onChange={handleChange}
-            min="1"
-            max="100"
+          />
+        </label>
+        <br />
+        <br />
+        <label>
+          DateTime{' '}
+          <input
+            type="time"
+            name="time"
+            value={formData.date}
+            onChange={handleChange}
           />
         </label>
         <br />
         <label>
-          Color{' '}
+          Court{' '}
           <select value={formData.color} onChange={handleChange} name="color">
-            <option value="white">White</option>
-            <option value="brown">Brown</option>
-            <option value="red">Rot</option>
-            <option value="black">Schwarz</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
           </select>
         </label>
         <fieldset>
-          <legend>Extras</legend>
+          <legend>Options</legend>
           <label>
-            spits{' '}
+            available Court{' '}
             <input
               type="checkbox"
-              name="spits"
-              checked={formData.spits}
+              name="available Court"
+              checked={formData.available_Court}
               onChange={handleCheckboxChange}
             />
           </label>
           <label>
-            bites{' '}
+            favourite Court {' '}
             <input
               type="checkbox"
               name="bites"
-              checked={formData.bites}
+              checked={formData.favourite_Court}
               onChange={handleCheckboxChange}
             />
           </label>
           <label>
-            extra eman{' '}
+            notification mail{' '}
             <input
               type="checkbox"
-              name="extraMean"
-              checked={formData.extraMean}
+              name="any Court"
+              checked={formData.notification_mail}
               onChange={handleCheckboxChange}
             />
           </label>
         </fieldset>
         <br />
         <label>
-          Message
+          Partner
           <textarea
             value={formData.message}
             onChange={handleChange}
-            name="message"
+            name="Partner"
           />
         </label>
         <div>
