@@ -73,7 +73,7 @@ function App() {
         <br />
         <br />
         <label>
-          DateTime{' '}
+          Time{' '}
           <input
             type="time"
             name="time"
